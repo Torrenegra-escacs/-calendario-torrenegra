@@ -9,7 +9,7 @@ const scheduleUpdates={"llob": {"time": "Según jornada", "days": {"2026-12-03":
 for(const e of seed){if(scheduleUpdates[e.id])Object.assign(e,scheduleUpdates[e.id]);}
 const localKeys=new Set(['liga','mem26','copa','vet','blitz','sants','minicopa','territ','prom',...seed.filter(e=>e.local).map(e=>e.group||e.id)]);
 // Public selection is authoritative and shared by all visitors. Edit here via GitHub or import an administrator export in a future update.
-const publication={selected:[...localKeys],own:[]};
+const publication={selected:["liga","mem26","copa","vet","blitz","sants","minicopa","territ","prom","tpJesus","tpAlbert","tpVila","tpDones","tpRapid","tpBicolor","sitges","santmarti","ecade","llob","pomar","cruise","move","memkids26","terr26","prom26","bcn0","bcn1"],own:[]};
 const isAdmin=location.protocol==='file:';
 document.body.classList.toggle('admin',isAdmin);
 let stored;try{if(isAdmin)stored=JSON.parse(localStorage.getItem('torrenegra-calendar-v1'))}catch{}
